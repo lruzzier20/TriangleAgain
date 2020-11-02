@@ -9,5 +9,7 @@ public class Tester{
     System.out.println(x.equals(y));
     Triangle I = new Triangle(x, y, z);
     Triangle J = new Triangle(0, 0, 3, 0, 3, 4);
+    System.out.println(I.getPerimeter());
+    System.out.println(J.getPerimeter());
   }
 }
