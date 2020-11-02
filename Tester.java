@@ -17,5 +17,7 @@ public class Tester{
     System.out.println(J.classify());
     System.out.println(I);
     System.out.println(J);
+    J.setVertex(1, z);
+    System.out.println(J);
   }
 }
