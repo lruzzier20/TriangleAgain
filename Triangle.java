@@ -19,4 +19,12 @@ public class Triangle{
   public double getPerimeter(){
     return v1.distanceTo(v2) + v2.distanceTo(v3) + v3.distanceTo(v1);
   }
+
+  public double area(){
+    double sideA = v1.distanceTo(v2);
+    double sideB = v2.distanceTo(v3);
+    double sideC = v3.distanceTo(v1);
+    double semiPerimeter = getPerimeter() / 2;
+    return Math.round(Math.sqrt(semiPerimeter * (semiPerimeter - sideA) * (semiPerimeter - sideB) * (semiPerimeter - sideC)) * 10000.0) / 10000.0;
+  }
 }

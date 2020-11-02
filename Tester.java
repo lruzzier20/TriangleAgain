@@ -11,5 +11,7 @@ public class Tester{
     Triangle J = new Triangle(0, 0, 3, 0, 3, 4);
     System.out.println(I.getPerimeter());
     System.out.println(J.getPerimeter());
+    System.out.println(I.area());
+    System.out.println(J.area());
   }
 }
