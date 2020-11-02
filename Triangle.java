@@ -20,11 +20,24 @@ public class Triangle{
     return v1.distanceTo(v2) + v2.distanceTo(v3) + v3.distanceTo(v1);
   }
 
-  public double area(){
+  public double getArea(){
     double sideA = v1.distanceTo(v2);
     double sideB = v2.distanceTo(v3);
     double sideC = v3.distanceTo(v1);
     double semiPerimeter = getPerimeter() / 2;
     return Math.round(Math.sqrt(semiPerimeter * (semiPerimeter - sideA) * (semiPerimeter - sideB) * (semiPerimeter - sideC)) * 10000.0) / 10000.0;
+  }
+
+  public String classify(){
+    double sideA = v1.distanceTo(v2);
+    double sideB = v2.distanceTo(v3);
+    double sideC = v3.distanceTo(v1);
+    if(sideA == sideB && sideB == sideC){return "equilateral";}
+    if(sideA == sideB || sideB == sideC || sideA == sideC){return "isosceles";}
+    return "scalene";
+  }
+
+  public String toString(){
+    return "v1("+v1.getX()+", "+v1.getY()+") v2("+v2.getX()+", "+v2.getY()+") v3("+v3.getX()+", "+v3.getY()+")";
   }
 }
